@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import {
   BorderGradient,
@@ -28,7 +27,7 @@ type Props = {
 
 const AVATAR_DEFAULT = Image.resolveAssetSource(avatarImg).uri
 
-export function UserPhoto({ imageUri = avatarImg, sizes = 'NORMAL' }: Props) {
+export function UserPhoto({ imageUri, sizes = 'NORMAL' }: Props) {
   const { containerSize, avatarSize } = SIZES[sizes];
 
   return (
